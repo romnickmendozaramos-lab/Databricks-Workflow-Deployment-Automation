@@ -29,7 +29,7 @@ run_mock = ActiveRun(Run(run_info, run_data))
 data_mock = {"data": base64.b64encode(json.dumps({"sample": "1"}).encode("utf-8"))}
 
 
-class DeployTest(DbxTest):
+class LaunchTest(DbxTest):
     @patch("databricks_cli.configure.provider.ProfileConfigProvider.get_config",
            return_value=test_dbx_config)
     @patch("databricks_cli.workspace.api.WorkspaceService.get_status", return_value=True)
